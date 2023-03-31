@@ -15,7 +15,7 @@ def sanitize(input_string):
         output_string += outchar
     return output_string
 
-forms_data = []  # all submissions
+forms_data = []
 
 conn = sqlite3.connect("feedback.db")
 c = conn.cursor()
@@ -60,7 +60,7 @@ def application(environ, start_response):
         c.execute("SELECT * FROM feedback")
         data = c.fetchall()
 
-        # generate an HTML table with the data
+        # Generate an HTML table with the data
         html = "<table>"
         html += "<tr><th>ID</th><th>Name</th><th>Email</th><th>Type</th><th>Content</th></tr>"
         for row in data:
