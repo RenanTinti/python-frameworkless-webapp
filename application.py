@@ -92,5 +92,4 @@ if __name__ == "__main__":
         )
         w_s.serve_forever()
     except KeyboardInterrupt:
-        # Close the database connection when the server is stopped
-        conn.close()
+        conn.close() 
