@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form</title>
+    <style>
+        section {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 450px;
+            margin: auto;
+        }
+
+        form>div {
+            display: flex;
+            flex-direction: column;
+            margin: 10px 0px;
+            text-align: left;
+        }
+
+        form>div>input,
+        form>div>select {
+            padding: 10px;
+        }
+
+        form>button {
+            padding: 10px 25px;
+            font-size: 15.5px;
+            background-color: #fff;
+            border: 2px solid #233;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <h1>Feedback</h1>
+        </header>
+        <form action="/" method="post">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div>
+                <label for="f-type">Feedback Type</label>
+                <select name="f-type" id="f-type">
+                    <option value="question"></option>
+                    <option value="suggestion">suggestion</option>
+                    <option value="comment">Comment</option>
+                </select>
+            </div>
+            <div>
+                <label for="feedback">Describe Your Feedback</label>
+                <textarea name="feedback" id="feedback" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+
+</html>
