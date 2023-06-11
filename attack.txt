@@ -1,1 +1,1 @@
-<script>while(true){alert('teste')}</script>
+<script>while(true){alert('infinite loop')}</script>
