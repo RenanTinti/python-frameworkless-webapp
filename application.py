@@ -46,7 +46,6 @@ def application(environ, start_response):
             data = urllib.parse.parse_qs(body, keep_blank_values=True)
 
             if sanitize_input_fields == "1":
-                print("Sanitization is on")
                 req = {
                     "name": sanitize(data["name"][0]),
                     "email": sanitize(data["email"][0]),
@@ -54,7 +53,6 @@ def application(environ, start_response):
                     "content": sanitize(data["feedback"][0]),
                 }
             elif sanitize_input_fields == "0":
-                print("Sanitization is off")
                 req = {
                     "name": data["name"][0],
                     "email": data["email"][0],
